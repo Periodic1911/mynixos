@@ -90,13 +90,14 @@
   users.users.anne = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      firefox
-      pavucontrol
-      pciutils
-      keepassxc
-      git
-    ];
+#    packages = with pkgs; [
+#      firefox
+#      pavucontrol
+#      pciutils
+#      keepassxc
+#      git
+#      home-manager
+#    ];
   };
 
   # List packages installed in system profile. To search, run:
