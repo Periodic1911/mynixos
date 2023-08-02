@@ -64,6 +64,8 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+    ".local/wp-light.jpg".source = dotfiles/wp-light.jpg;
+    ".local/wp-dark.jpg".source = dotfiles/wp-dark.jpg;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
