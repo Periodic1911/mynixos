@@ -27,6 +27,7 @@
     fluffychat
     discord
     htop
+    (pkgs.buildEnv { name = "my-scripts"; paths = [ ./scripts ]; })
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -50,6 +51,7 @@
   home.file = {
     ".local/wp-light.jpg".source = dotfiles/wp-light.jpg;
     ".local/wp-dark.jpg".source = dotfiles/wp-dark.jpg;
+    ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
@@ -73,7 +75,7 @@
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "vim";
   };
 
   # Let Home Manager install and manage itself.
