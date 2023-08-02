@@ -7,7 +7,7 @@
     nix-colors.homeManagerModules.default
   ];
 
-  colorScheme = nix-colors.lib.schemeFromYAML "shades-of-purple" (builtins.readFile ./shades-of-purple.yaml);
+  colorScheme = nix-colors.lib.schemeFromYAML "hopscotch" (builtins.readFile ./hopscotch.yaml);
 
   #Make GTK and QT use dark mode
   gtk = {
