@@ -26,6 +26,10 @@
   boot.loader.efi.efiSysMountPoint = "/efi";
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Keeps AMD gpu from freezing on wakeup
+  # https://gitlab.freedesktop.org/drm/amd/-/issues/1887
+  boot.kernelParams = [ "drm.vblankoffdelay=0" ];
+
   # Init root password
   #users.users.root.initialHashedPassword = "";
 
@@ -103,12 +107,17 @@
     swww
     rofi-wayland
     kitty
+    swayidle
+    swaylock
     # To make workspaces work with Hyprland and waybar
     (waybar.overrideAttrs (oldAttrs: {
          mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
        })
     )
   ];
+  
+  # Needed for gtklock
+  security.pam.services.swaylock = {};
 
   # List fonts
   fonts.fonts = with pkgs; [
