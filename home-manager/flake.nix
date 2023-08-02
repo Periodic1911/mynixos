@@ -18,15 +18,19 @@
         config.allowUnfree = true;
       };
     in {
-      homeConfigurations.anne = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.anne-light = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
-        modules = [ ./home.nix ];
+        modules = [ ./home.nix ./light.nix ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
+      };
+      homeConfigurations.anne-dark = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [ ./home.nix ./dark.nix ];
       };
     };
 }

@@ -15,22 +15,6 @@
   # release notes.
   home.stateVersion = "22.11"; # Please read the comment before changing.
 
-  # Dark theme
-  gtk = {
-    enable = true;
-    theme.package = pkgs.gnome.gnome-themes-extra;
-    theme.name = "Adwaita-dark";
-  };
-  qt = {
-    enable = true;
-    platformTheme = "gtk";
-  };
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-    };
-  };
-
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
