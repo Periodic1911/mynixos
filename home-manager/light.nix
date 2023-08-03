@@ -29,7 +29,7 @@
     kitty = {
       enable = true;
       settings = {
-        foreground = "#${config.colorScheme.colors.base05}";
+        foreground = "#${config.colorScheme.colors.base07}";
         background = "#${config.colorScheme.colors.base00}";
         color0 = "#${config.colorScheme.colors.base00}";
         color1 = "#${config.colorScheme.colors.base01}";

@@ -26,6 +26,7 @@
     evince
     fluffychat
     discord
+    teams
     htop
     mpv
     ffmpeg
