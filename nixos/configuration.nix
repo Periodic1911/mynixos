@@ -12,6 +12,11 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  nix.settings.trusted-users = [ "root" "anne" ];
+
+  nixpkgs.config.allowUnfree = true;
+  services.udev.packages = [ pkgs.saleae-logic-2 ];
+
   # Use the systemd-boot EFI boot loader.
   #boot.loader.systemd-boot.enable = true;
   #boot.loader.efi.canTouchEfiVariables = true;
