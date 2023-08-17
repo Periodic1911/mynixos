@@ -17,6 +17,8 @@
   nixpkgs.config.allowUnfree = true;
   services.udev.packages = [ pkgs.saleae-logic-2 ];
 
+  services.avahi.enable = true;
+
   # Use the systemd-boot EFI boot loader.
   #boot.loader.systemd-boot.enable = true;
   #boot.loader.efi.canTouchEfiVariables = true;
