@@ -15,7 +15,10 @@
   nix.settings.trusted-users = [ "root" "anne" ];
 
   nixpkgs.config.allowUnfree = true;
-  services.udev.packages = [ pkgs.saleae-logic-2 ];
+  services.udev.packages = [ 
+    pkgs.saleae-logic-2
+    pkgs.platformio-core.udev
+  ];
 
   services.avahi.enable = true;
 

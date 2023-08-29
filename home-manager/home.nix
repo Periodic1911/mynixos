@@ -32,6 +32,7 @@
     ffmpeg
     koreader
     gnome.simple-scan
+    cura
     (pkgs.buildEnv { name = "my-scripts"; paths = [ ./scripts ]; })
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -57,6 +58,7 @@
     ".local/wp-light.jpg".source = dotfiles/wp-light.jpg;
     ".local/wp-dark.jpg".source = dotfiles/wp-dark.jpg;
     ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf;
+    ".local/eduroam.cert".source = dotfiles/eduroam.cert;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
