@@ -36,6 +36,8 @@
     grim
     slurp
     wl-clipboard
+    rustc
+    cargo
     (pkgs.buildEnv { name = "my-scripts"; paths = [ ./scripts ]; })
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -86,6 +88,15 @@
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
     EDITOR = "vim";
+    TERM = "xterm"; # just for compatibility
+  };
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      vscodevim.vim
+      rust-lang.rust-analyzer
+    ];
   };
 
   # Let Home Manager install and manage itself.
