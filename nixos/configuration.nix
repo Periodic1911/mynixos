@@ -31,10 +31,13 @@
     enable = true;
     device = "nodev";
     efiSupport = true;
-    #useOSProber = true;
+    useOSProber = true;
   };
   boot.loader.efi.efiSysMountPoint = "/efi";
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Windows keeps RTC in local time
+  time.hardwareClockInLocalTime = true;
 
   # Keeps AMD gpu from freezing on wakeup
   # https://gitlab.freedesktop.org/drm/amd/-/issues/1887
