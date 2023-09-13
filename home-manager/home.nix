@@ -33,6 +33,9 @@
     koreader
     gnome.simple-scan
     cura
+    grim
+    slurp
+    wl-clipboard
     (pkgs.buildEnv { name = "my-scripts"; paths = [ ./scripts ]; })
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
