@@ -32,6 +32,7 @@
     device = "nodev";
     efiSupport = true;
     useOSProber = true;
+    default = "saved";
   };
   boot.loader.efi.efiSysMountPoint = "/efi";
   boot.loader.efi.canTouchEfiVariables = true;
