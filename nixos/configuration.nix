@@ -152,12 +152,12 @@
     ((UID)) && PROMPT_COLOR="1;36m"
     if [ -n "$INSIDE_EMACS" ] || [ "$TERM" = "eterm" ] || [ "$TERM" = "eterm-color" ]; then
       # Emacs term mode doesn't support xterm title escape sequence (\e]0;)
-      PS1="\n\[\033[$PROMPT_COLOR\][\A@\h:\w]\\$\[\033[0m\] "
+      PS1="\n\[\033[$PROMPT_COLOR\][\A@🦊:\w]\\$\[\033[0m\] "
     else
-      PS1="\n\[\033[$PROMPT_COLOR\][\[\e]0;\A@\h: \w\a\]\A@\h:\w]\\$\[\033[0m\] "
+      PS1="\n\[\033[$PROMPT_COLOR\][\[\e]0;\A@🦊: \w\a\]\A@🦊:\w]\\$\[\033[0m\] "
     fi
     if test "$TERM" = "xterm"; then
-      PS1="\[\033]2;\h:\A:\w\007\]$PS1"
+      PS1="\[\033]2;🦊:\A:\w\007\]$PS1"
     fi
   fi
   '';
