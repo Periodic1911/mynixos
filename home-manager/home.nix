@@ -38,6 +38,8 @@
     wl-clipboard
     rustc
     cargo
+    toybox
+    feh
     (pkgs.buildEnv { name = "my-scripts"; paths = [ ./scripts ]; })
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
