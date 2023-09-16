@@ -123,6 +123,7 @@
     kitty
     swayidle
     swaylock
+    networkmanagerapplet
     # To make workspaces work with Hyprland and waybar
     (waybar.overrideAttrs (oldAttrs: {
          mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
