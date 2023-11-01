@@ -29,6 +29,7 @@
     teams
     htop
     mpv
+    yt-dlp
     ffmpeg
     koreader
     gnome.simple-scan
@@ -40,6 +41,7 @@
     gcc
     cargo
     #toybox
+    busybox
     feh
     wireshark
     (pkgs.buildEnv { name = "my-scripts"; paths = [ ./scripts ]; })
