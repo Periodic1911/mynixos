@@ -38,10 +38,8 @@
     slurp
     wl-clipboard
     rustc
-    gcc
     cargo
-    #toybox
-    busybox
+    toybox
     feh
     wireshark
     (pkgs.buildEnv { name = "my-scripts"; paths = [ ./scripts ]; })
