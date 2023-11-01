@@ -22,6 +22,8 @@
 
   services.avahi.enable = true;
 
+  programs.wireshark.enable = true;
+
   # Use the systemd-boot EFI boot loader.
   #boot.loader.systemd-boot.enable = true;
   #boot.loader.efi.canTouchEfiVariables = true;
@@ -107,7 +109,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.anne = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "wireshark" ]; # Enable ‘sudo’ for the user.
   };
 
   # List packages installed in system profile. To search, run:

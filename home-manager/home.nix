@@ -37,9 +37,11 @@
     slurp
     wl-clipboard
     rustc
+    gcc
     cargo
-    toybox
+    #toybox
     feh
+    wireshark
     (pkgs.buildEnv { name = "my-scripts"; paths = [ ./scripts ]; })
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
