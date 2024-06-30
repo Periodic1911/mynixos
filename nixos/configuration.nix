@@ -25,19 +25,19 @@
   programs.wireshark.enable = true;
 
   # Use the systemd-boot EFI boot loader.
-  #boot.loader.systemd-boot.enable = true;
-  #boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
   
   # Use grub EFI
-  boot.loader.grub = {
-    enable = true;
-    device = "nodev";
-    efiSupport = true;
-    useOSProber = true;
-    default = "saved";
-  };
-  boot.loader.efi.efiSysMountPoint = "/efi";
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.grub = {
+  #   enable = true;
+  #   device = "nodev";
+  #   efiSupport = true;
+  #   useOSProber = true;
+  #   default = "saved";
+  # };
+  # boot.loader.efi.efiSysMountPoint = "/efi";
+  # boot.loader.efi.canTouchEfiVariables = true;
 
   # Windows keeps RTC in local time
   time.hardwareClockInLocalTime = true;
@@ -117,6 +117,7 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    git
   # System packages for hyprland
     mako
     libnotify
